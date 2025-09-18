@@ -1,0 +1,20 @@
+[
+    {
+        "username": "qaAutomationTechTask@grr.la",
+        "password": "A1234567890-"
+    },
+    {
+        "firstName": "Abiodun",
+        "lastName": "Ezekiel",
+        "emailAddress": "abiodunezekiel1@example.com",
+        "phoneNumber": "0000011111",
+        "jobTitle": "QA Engineer"
+    },
+    {
+        "firstName": "Sophia",
+        "lastName": "Williams",
+        "emailAddress": "sophia.williams87@example.com",
+        "phoneNumber": "5551237890",
+        "jobTitle": "Software Tester"
+    }
+]

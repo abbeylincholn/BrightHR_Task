@@ -1,0 +1,239 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic "Main navigation" [ref=e6]:
+      - generic [ref=e8]:
+        - button "Skip to content" [ref=e9] [cursor=pointer]
+        - button "Open app switcher modal" [ref=e11] [cursor=pointer]:
+          - img [ref=e12] [cursor=pointer]
+          - generic [ref=e19] [cursor=pointer]: Apps
+        - generic [ref=e20]:
+          - button "profile" [ref=e21] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: QA
+          - button "notifications 0" [ref=e24] [cursor=pointer]:
+            - img [ref=e26] [cursor=pointer]
+        - button "scroll nav bar up" [disabled] [ref=e30]
+        - generic [ref=e31]:
+          - link "Home" [ref=e32] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e34] [cursor=pointer]:
+              - img [ref=e35] [cursor=pointer]
+              - generic [ref=e37] [cursor=pointer]: Home
+          - link "Rotas" [ref=e38] [cursor=pointer]:
+            - /url: /rota-planner
+            - generic [ref=e40] [cursor=pointer]:
+              - img [ref=e41] [cursor=pointer]
+              - generic [ref=e48] [cursor=pointer]: Rotas
+          - link "Employees" [ref=e49] [cursor=pointer]:
+            - /url: /employee-hub
+            - generic [ref=e51] [cursor=pointer]:
+              - img [ref=e52] [cursor=pointer]
+              - generic [ref=e54] [cursor=pointer]: Employees
+          - link "Resources" [ref=e55] [cursor=pointer]:
+            - /url: /resources
+            - generic [ref=e57] [cursor=pointer]:
+              - img [ref=e58] [cursor=pointer]
+              - generic [ref=e60] [cursor=pointer]: Resources
+          - link "Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - generic [ref=e63] [cursor=pointer]:
+              - img [ref=e64] [cursor=pointer]
+              - generic [ref=e66] [cursor=pointer]: Reports
+          - link "Upgrade" [ref=e67] [cursor=pointer]:
+            - /url: /upgrade
+            - generic [ref=e68] [cursor=pointer]:
+              - img [ref=e71] [cursor=pointer]
+              - generic [ref=e73] [cursor=pointer]: Upgrade
+          - button "All BrightHR products" [ref=e77] [cursor=pointer]:
+            - img [ref=e78] [cursor=pointer]
+            - generic [ref=e85] [cursor=pointer]:
+              - paragraph [ref=e86] [cursor=pointer]: All
+              - paragraph [ref=e87] [cursor=pointer]: BrightHR
+              - paragraph [ref=e88] [cursor=pointer]: products
+        - button "scroll nav bar down" [ref=e89] [cursor=pointer]:
+          - img [ref=e90] [cursor=pointer]
+      - button "Close side draw" [ref=e94] [cursor=pointer]:
+        - img [ref=e95] [cursor=pointer]
+    - banner [ref=e99]:
+      - generic [ref=e100]:
+        - link "Bright HR home page" [ref=e102] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e104] [cursor=pointer]
+        - list [ref=e119]:
+          - listitem [ref=e120]:
+            - generic [ref=e124]:
+              - textbox "Search employees..." [ref=e125]
+              - img [ref=e126]
+          - listitem [ref=e128]:
+            - link "Help" [ref=e129] [cursor=pointer]:
+              - /url: https://elearning.brighthr.com/brighthr/en/hr-lite-help
+              - img [ref=e130] [cursor=pointer]
+              - generic [ref=e132] [cursor=pointer]: Help
+          - listitem [ref=e133]:
+            - button "Feedback" [ref=e134] [cursor=pointer]:
+              - img [ref=e135] [cursor=pointer]
+              - generic [ref=e138] [cursor=pointer]: Feedback
+          - listitem [ref=e139]
+          - listitem [ref=e140]:
+            - link "Logout" [ref=e141] [cursor=pointer]:
+              - /url: /logout
+              - img [ref=e142] [cursor=pointer]
+              - generic [ref=e145] [cursor=pointer]: Logout
+          - listitem [ref=e146]:
+            - link "Upgrade" [ref=e147] [cursor=pointer]:
+              - /url: /upgrade
+    - main [ref=e148]:
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - heading "Hi, QA" [level=3] [ref=e153]
+          - generic [ref=e154]: Thu, 18th Sep 2025
+        - generic [ref=e155]:
+          - generic [ref=e156]:
+            - heading "Your daily rota update" [level=1] [ref=e157]
+            - generic [ref=e158]: Get a clear view of your current and upcoming rotas with our easy-to-use dashboard.
+            - generic [ref=e159]:
+              - generic [ref=e162]:
+                - img [ref=e163]
+                - generic [ref=e168]: 0/0
+              - generic [ref=e169]:
+                - generic [ref=e170]:
+                  - img [ref=e171]
+                  - heading "Rotas" [level=2] [ref=e178]
+                - generic [ref=e179]:
+                  - generic [ref=e180]: "0"
+                  - generic [ref=e181]: Published
+                - generic [ref=e182]:
+                  - generic [ref=e183]: "0"
+                  - generic [ref=e184]: Unpublished
+                - link "Create new rota" [ref=e186] [cursor=pointer]:
+                  - /url: /rota-planner/create-rota
+          - generic [ref=e187]:
+            - generic [ref=e188]: Upcoming rotas
+            - generic [ref=e190]:
+              - table [ref=e191]:
+                - rowgroup [ref=e192]:
+                  - row "Date Rota" [ref=e193]:
+                    - cell "Date" [ref=e194]:
+                      - generic [ref=e196]: Date
+                    - cell "Rota" [ref=e197]:
+                      - generic [ref=e199]: Rota
+              - generic [ref=e200]: Your upcoming rotas will be displayed here
+        - generic [ref=e201]:
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - generic [ref=e204]:
+                - img [ref=e205]
+                - heading "Employees" [level=2] [ref=e207]
+              - generic [ref=e208]:
+                - generic [ref=e209]: "315"
+                - generic [ref=e210]: current employees
+              - generic [ref=e211]: 1 Admin, 0 Managers, 314 Employees
+              - paragraph [ref=e213]: View or add employees
+              - generic [ref=e214]:
+                - button "Add employee" [ref=e216] [cursor=pointer]
+                - link "See all employees" [ref=e218] [cursor=pointer]:
+                  - /url: /employee-hub/manage-employees
+            - generic [ref=e219]:
+              - generic [ref=e220]: Why should I add employees?
+              - paragraph [ref=e221]:
+                - paragraph [ref=e222]: To get the most out of BrightHR Lite, it's vital that you add your employee details.
+                - paragraph [ref=e223]: You can then start assigning employees to shifts and sending staff automatic notifications of new rotas.
+                - paragraph [ref=e224]: Plus, as our system is 100% secure, you don't have to worry about your data being compromised—it's safe with us!
+          - generic [ref=e225]:
+            - generic [ref=e226]:
+              - generic [ref=e227]:
+                - img [ref=e228]
+                - heading "Your profile" [level=2] [ref=e230]
+              - paragraph [ref=e231]:
+                - paragraph [ref=e232]: You’re nearly there… but we need to get a few more details from you first.
+                - paragraph [ref=e233]: These details will help us tailor your BrightHR Lite experience.
+              - button "Complete my setup" [ref=e235] [cursor=pointer]
+            - generic [ref=e236]:
+              - generic [ref=e237]: Discover more about BrightHR
+              - paragraph [ref=e238]:
+                - paragraph [ref=e239]: BrightHR is multi-award-winning HR software that transforms your business processes for good.
+                - paragraph [ref=e240]: On top of premium rota-planning software, it helps you manage staff holidays with ease, log sick leave at the click of a button, and modernise your filing system with unlimited cloud-based document storage.
+                - paragraph [ref=e241]: It's no wonder 100,000+ global businesses trust BrightHR with their people management.
+              - generic [ref=e242]:
+                - button "Book a free demo" [ref=e243] [cursor=pointer]
+                - button "Watch quick video" [ref=e244] [cursor=pointer]
+          - generic [ref=e245]:
+            - generic [ref=e247]:
+              - generic [ref=e248]:
+                - img "Bright Exchange logo" [ref=e249]
+                - heading "Bright Exchange" [level=2] [ref=e250]:
+                  - link "Bright Exchange" [ref=e251] [cursor=pointer]:
+                    - /url: https://sandbox-exchange.brighthr.com/uk/marketplace
+              - generic [ref=e252]:
+                - button "Previous advert" [ref=e253] [cursor=pointer]:
+                  - img [ref=e254] [cursor=pointer]
+                - generic [ref=e256]:
+                  - generic [ref=e257]:
+                    - img "New Balance advert" [ref=e258]
+                    - img "grüum advert" [ref=e259]
+                    - img "Myprotein advert" [ref=e260]
+                    - img "Sekonda advert" [ref=e261]
+                    - img "Waterstones advert" [ref=e262]
+                    - img "Nisbets advert" [ref=e263]
+                    - img "Boots advert" [ref=e264]
+                    - img "American Golf advert" [ref=e265]
+                    - img "Pooch and Mutt advert" [ref=e266]
+                    - img "Ocado advert" [ref=e267]
+                    - img "New Look advert" [ref=e268]
+                    - img "New Balance advert" [ref=e269]
+                  - generic [ref=e270]:
+                    - generic [ref=e271]:
+                      - heading "New Balance" [level=3] [ref=e272]
+                      - paragraph [ref=e273]: New Balance Outlet & Sale
+                    - link "Get offer" [ref=e275] [cursor=pointer]:
+                      - /url: https://sandbox-exchange.brighthr.com/uk/offers/advert/Tlw8fz2RQAu1d5fDCxxxkQ/KAPHicViTZaDyxet15DR1w
+                - button "Next advert" [ref=e276] [cursor=pointer]:
+                  - img [ref=e277] [cursor=pointer]
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - generic [ref=e281]:
+                  - img "Bright brainbox logo" [ref=e282]
+                  - img "brain box cog background" [ref=e284]
+                - combobox [ref=e286]:
+                  - textbox "Ask an HR question" [ref=e287]
+                  - button "Submit HR question" [ref=e288] [cursor=pointer]: Ask
+                  - listbox
+              - generic [ref=e289]:
+                - heading "Got a tricky HR question? Ask BrightLightning" [level=3] [ref=e290]
+                - paragraph [ref=e291]:
+                  - paragraph [ref=e292]: It’s a FREE A.I. HR advice platform that has the answers to 8,000+ HR questions.
+                  - paragraph [ref=e293]: So, whether you’ve got a question about annual leave, sick pay or employment contracts, BrightLightning has the right answers for you.
+                - link "Ask BrightLightning now" [ref=e294] [cursor=pointer]:
+                  - /url: https://sandbox-brainbox.brighthr.com/uk/?logged-in=true
+              - generic [ref=e295]:
+                - heading "Get expert HR advice on us!" [level=3] [ref=e296]
+                - paragraph [ref=e297]:
+                  - paragraph [ref=e298]: To say thanks for signing up, we’re giving you free, friendly, and comprehensive emergency advice calls* to our trained HR experts.
+                  - paragraph [ref=e299]:
+                    - text: Simply, give us a ring on
+                    - link "0800 756 0826" [ref=e300] [cursor=pointer]:
+                      - /url: tel:08007560826
+                    - text: .
+                  - paragraph [ref=e301]:
+                    - generic [ref=e302]:
+                      - text: °Initial free advice is limited to three calls and doesn't include on-going case management. Find out more about our
+                      - link "premium 24/7 HR support service" [ref=e303] [cursor=pointer]:
+                        - /url: /upgrade/hr-advice
+                      - text: .
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - text: Join the
+            - generic [ref=e306]: 100,000+
+            - text: businesses who trust BrightHR
+          - generic [ref=e308]:
+            - img "Salford City FC logo" [ref=e309]
+            - img "Quooker logo" [ref=e310]
+            - img "Mattinson Partnership logo" [ref=e311]
+            - img "Theatr Genedlaethol Cymru logo" [ref=e312]
+            - img "DPH Management Services logo" [ref=e313]
+          - button "Upgrade my account" [ref=e314] [cursor=pointer]
+    - img [ref=e315] [cursor=pointer]
+  - status [ref=e317]
+```

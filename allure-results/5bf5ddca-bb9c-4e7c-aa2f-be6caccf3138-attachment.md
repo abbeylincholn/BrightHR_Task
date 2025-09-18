@@ -1,0 +1,119 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e5]:
+    - generic "Main navigation" [ref=e6]:
+      - generic [ref=e8]:
+        - button "Skip to content" [ref=e9] [cursor=pointer]
+        - button "Open app switcher modal" [ref=e11] [cursor=pointer]:
+          - img [ref=e12] [cursor=pointer]
+          - generic [ref=e19] [cursor=pointer]: Apps
+        - generic [ref=e20]:
+          - button "profile" [ref=e21] [cursor=pointer]:
+            - generic [ref=e23] [cursor=pointer]: AE
+          - button "notifications 0" [ref=e24] [cursor=pointer]:
+            - img [ref=e26] [cursor=pointer]
+        - button "scroll nav bar up" [disabled] [ref=e30]
+        - generic [ref=e31]:
+          - link "Home" [ref=e32] [cursor=pointer]:
+            - /url: /dashboard
+            - generic [ref=e34] [cursor=pointer]:
+              - img [ref=e35] [cursor=pointer]
+              - generic [ref=e37] [cursor=pointer]: Home
+          - link "Rotas" [ref=e38] [cursor=pointer]:
+            - /url: /rota-planner
+            - generic [ref=e40] [cursor=pointer]:
+              - img [ref=e41] [cursor=pointer]
+              - generic [ref=e48] [cursor=pointer]: Rotas
+          - link "Employees" [ref=e49] [cursor=pointer]:
+            - /url: /employee-hub
+            - generic [ref=e51] [cursor=pointer]:
+              - img [ref=e52] [cursor=pointer]
+              - generic [ref=e54] [cursor=pointer]: Employees
+          - link "Resources" [ref=e55] [cursor=pointer]:
+            - /url: /resources
+            - generic [ref=e57] [cursor=pointer]:
+              - img [ref=e58] [cursor=pointer]
+              - generic [ref=e60] [cursor=pointer]: Resources
+          - link "Reports" [ref=e61] [cursor=pointer]:
+            - /url: /reports
+            - generic [ref=e63] [cursor=pointer]:
+              - img [ref=e64] [cursor=pointer]
+              - generic [ref=e66] [cursor=pointer]: Reports
+          - link "Upgrade" [ref=e67] [cursor=pointer]:
+            - /url: /upgrade
+            - generic [ref=e68] [cursor=pointer]:
+              - img [ref=e71] [cursor=pointer]
+              - generic [ref=e73] [cursor=pointer]: Upgrade
+          - button "All BrightHR products" [ref=e77] [cursor=pointer]:
+            - img [ref=e78] [cursor=pointer]
+            - generic [ref=e85] [cursor=pointer]:
+              - paragraph [ref=e86] [cursor=pointer]: All
+              - paragraph [ref=e87] [cursor=pointer]: BrightHR
+              - paragraph [ref=e88] [cursor=pointer]: products
+        - button "scroll nav bar down" [ref=e89] [cursor=pointer]:
+          - img [ref=e90] [cursor=pointer]
+      - button "Close side draw" [ref=e94] [cursor=pointer]:
+        - img [ref=e95] [cursor=pointer]
+    - banner [ref=e99]:
+      - generic [ref=e100]:
+        - link "Bright HR home page" [ref=e102] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e104] [cursor=pointer]
+        - list [ref=e119]:
+          - listitem [ref=e120]:
+            - generic [ref=e124]:
+              - textbox "Search employees..." [ref=e125]
+              - img [ref=e126]
+          - listitem [ref=e128]:
+            - link "Help" [ref=e129] [cursor=pointer]:
+              - /url: https://elearning.brighthr.com/brighthr/en/hr-lite-help
+              - img [ref=e130] [cursor=pointer]
+              - generic [ref=e132] [cursor=pointer]: Help
+          - listitem [ref=e133]:
+            - button "Feedback" [ref=e134] [cursor=pointer]:
+              - img [ref=e135] [cursor=pointer]
+              - generic [ref=e138] [cursor=pointer]: Feedback
+          - listitem [ref=e139]
+          - listitem [ref=e140]:
+            - link "Logout" [ref=e141] [cursor=pointer]:
+              - /url: /logout
+              - img [ref=e142] [cursor=pointer]
+              - generic [ref=e145] [cursor=pointer]: Logout
+          - listitem [ref=e146]:
+            - link "Upgrade" [ref=e147] [cursor=pointer]:
+              - /url: /upgrade
+    - main [ref=e148]:
+      - generic [ref=e150]:
+        - heading "Employee hub" [level=1] [ref=e151]
+        - generic [ref=e152]:
+          - link "Employees" [ref=e153] [cursor=pointer]:
+            - /url: /employee-hub/manage-employees
+          - link "Permissions" [ref=e154] [cursor=pointer]:
+            - /url: /employee-hub/permissions
+          - link "Manage teams PREMIUM" [ref=e155] [cursor=pointer]:
+            - /url: /employee-hub/teams
+            - text: Manage teams
+            - generic [ref=e156] [cursor=pointer]: PREMIUM
+          - link "Who's in PREMIUM" [ref=e157] [cursor=pointer]:
+            - /url: /upgrade/whos-in
+            - text: Who's in
+            - generic [ref=e158] [cursor=pointer]: PREMIUM
+          - link "Recruitment PREMIUM" [ref=e159] [cursor=pointer]:
+            - /url: /upgrade/recruitment
+            - text: Recruitment
+            - generic [ref=e160] [cursor=pointer]: PREMIUM
+        - button "Add employee" [active] [ref=e162] [cursor=pointer]
+        - textbox [ref=e166]
+        - heading "Employees (1)" [level=3] [ref=e167]
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - generic [ref=e173]: AE
+            - heading "Abiodun Ezekiel" [level=1] [ref=e175]
+          - link [ref=e176] [cursor=pointer]:
+            - /url: /employee-profile/c286df05-d2f2-4467-9b0a-838f80c176ad
+            - img [ref=e177] [cursor=pointer]
+    - img [ref=e179] [cursor=pointer]
+  - status [ref=e181]
+```
