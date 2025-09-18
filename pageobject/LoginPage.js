@@ -6,6 +6,7 @@ class LoginPage {
     this.userName = page.locator('#username');
     this.password = page.locator('#password');
     this.signInButton = page.locator("[type='submit']");
+    this.pageLoad = page.locator(".py-2.text-3xl.font-bold").first();
   }
 
   async goto() {
@@ -16,7 +17,7 @@ class LoginPage {
     await this.userName.fill(username);
     await this.password.fill(password);
     await this.signInButton.click();
-    await this.page.waitForLoadState('networkidle');    
+    await this.pageLoad.waitFor();    
   }
 }
 

@@ -1,0 +1,52 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e8]:
+    - heading "Login to Bright" [level=1] [ref=e9]
+    - generic [ref=e10]:
+      - generic [ref=e13]:
+        - generic [ref=e15]: Email address
+        - textbox "Email address" [ref=e17]: abbeyzekiel100@gmail.com
+      - generic [ref=e18]:
+        - generic [ref=e21]:
+          - generic [ref=e23]: Password
+          - generic [ref=e24]:
+            - textbox "Password visibility" [active] [ref=e25]: Br1ghT!72#Xq-
+            - button "visibility" [ref=e27] [cursor=pointer]:
+              - img [ref=e28] [cursor=pointer]
+        - button "Forgot your password?" [ref=e31] [cursor=pointer]
+      - paragraph [ref=e32]: Invalid credentials
+      - generic [ref=e34] [cursor=pointer]:
+        - checkbox "I'm using a public or shared device"
+        - img [ref=e36] [cursor=pointer]
+        - generic [ref=e40] [cursor=pointer]: I'm using a public or shared device
+      - button "Login" [ref=e43] [cursor=pointer]
+    - paragraph [ref=e44]:
+      - text: Struggling to login?
+      - link "Visit our support page" [ref=e45] [cursor=pointer]:
+        - /url: https://www.brighthr.com/onboarding/?audience=admin&audience=manager&audience=employee&audience=all&product=brighthr&topic=loggingin
+    - paragraph [ref=e48]: or use
+    - generic [ref=e49]:
+      - link "Sign in with Apple" [ref=e50] [cursor=pointer]:
+        - /url: /sso/apple/login
+        - img "Apple logo" [ref=e51] [cursor=pointer]
+      - link "Sign in with Facebook" [ref=e52] [cursor=pointer]:
+        - /url: /sso/facebook/login
+        - img "Facebook logo" [ref=e53] [cursor=pointer]
+      - link "Sign in with Google" [ref=e54] [cursor=pointer]:
+        - /url: /sso/google/login
+        - img "Google logo" [ref=e55] [cursor=pointer]
+      - link "Sign in with Microsoft" [ref=e56] [cursor=pointer]:
+        - /url: /sso/microsoft/login
+        - img "Microsoft logo" [ref=e57] [cursor=pointer]
+    - generic [ref=e58]:
+      - paragraph [ref=e59]:
+        - text: Logging in is deemed acceptance of our
+        - link "terms" [ref=e60] [cursor=pointer]:
+          - /url: https://www.brighthr.com/terms/?tab=terms
+      - paragraph [ref=e61]:
+        - link "View our privacy policy" [ref=e62] [cursor=pointer]:
+          - /url: https://www.brighthr.com/terms/?tab=privacy
+  - alert [ref=e63]
+```
