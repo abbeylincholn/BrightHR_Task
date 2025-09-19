@@ -27,13 +27,6 @@ test('add two employees and verify listing for users', async ({ page }) => {
 
     await employeepage.navigateEmployees();
     await employeepage.expectEmployeesVisible([employee1, employee2]);
-
-
-
-    // await employeepage.addEmployee(employee1)
-    // await employeepage.addEmployee(employee2)
-
-
 });
 
 

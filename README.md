@@ -108,7 +108,6 @@ npx playwright test
 - **Type errors in config:** Stick to one module system (CommonJS or ESM).
 - **Allure not found:** Install Allure CLI via [docs](https://allurereport.org/docs/playwright/).
 
----
+-
 
-## 📄 License
-This project is provided for BrightHR assessment tasks and educational use.
+
