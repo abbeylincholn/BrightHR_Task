@@ -4,8 +4,8 @@ const { expect } = require('@playwright/test');
 class EmployeesPage {
   constructor(page) {
     this.page = page;
-    //this.addEmployeeBtn = page.getByRole('button', { name: /add employee/i });
-    this.addEmployeeBtn = page.getByRole("button", {name: "Add employee"});
+    // this.addEmployeeBtn = page.getByRole('button', { name: /add employee/i });
+    this.addEmployeeBtn = page.getByRole("button", { name: "Add employee" });
     this.modal = page.getByRole('dialog').filter({ hasText: /add employee/i });
     this.firstName = this.modal.locator('#firstName');
     this.lastName = this.modal.locator('#lastName');
@@ -21,7 +21,7 @@ class EmployeesPage {
 
     this.selectMonth = this.modal.locator('[data-e2e="select-month"]');
     this.months = this.panel.locator('.sc-htoDjs.sc-kjoXOD.hMglVo');
-    this.monthBtn = (index0) => this.months.nth(index0);
+    this.monthBtn = (index) => this.months.nth(index);
 
     this.day = (d) => this.panel.locator("//div[text()='" + d + "']");
     this.dayBtn = (d) => this.panel.getByRole('button', { name: new RegExp(`^${d}$`) });
@@ -29,10 +29,8 @@ class EmployeesPage {
     this.elementText = this.modal.locator('div[name="startDate"] span');
 
     this.employeesTab = page.locator("[title='Employees']");
-    this.grid = page.locator('.grid');   
-    this.overlay = page.locator('.w-7.fill-white');   
-
-  
+    this.grid = page.locator('.grid');
+    this.overlay = page.locator('.w-7.fill-white');
 
   }
 
@@ -68,7 +66,7 @@ class EmployeesPage {
     expect(actualList).toEqual(expectedList);
   }
 
-  async openAddEmployee() {    
+  async openAddEmployee() {
     await this.addEmployeeBtn.click();
     await expect(this.modal).toBeVisible();
   }
@@ -87,29 +85,31 @@ class EmployeesPage {
     await this.overlay.click();
   }
 
-  
+
 
   fullName(emp) {
     return `${emp.firstName} ${emp.lastName}`;
   }
 
-  async navigateEmployees() { 
+  async navigateEmployees() {
     await this.employeesTab.click();
     await expect(this.grid).toBeVisible();
   }
 
-   employeeName(name) {
+  employeeName(name) {
     return this.grid.getByRole('heading', { name, exact: false }).first();
   }
 
   async expectEmployeeVisible(emp) {
-    await expect(this.employeeName(this.fullName(emp))).toBeVisible();
+    const name = this.fullName(emp);
+    await expect(this.employeeName(name)).toBeVisible();
+    console.log(`Verified employee visible: ${name}`);
   }
+
 
   async expectEmployeesVisible(list) {
     for (const emp of list) {
       const ade = await this.expectEmployeeVisible(emp);
-      console.log(ade)
     }
   }
 
