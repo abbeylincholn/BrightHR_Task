@@ -11,8 +11,8 @@ test('add two employees and verify listing for users', async ({ page }) => {
 
     const username = data[0].username;
     const password = data[0].password;
-    const employee1 = data[1]
-    const employee2 = data[2]
+    const employee1 = data[1];
+    const employee2 = data[2];
 
     const loginPage = poManager.getLoginPage();
     await loginPage.goto();
@@ -22,8 +22,8 @@ test('add two employees and verify listing for users', async ({ page }) => {
     await sidebarPage.gotoEmployees();
 
     const employeepage = poManager.getEmployeesPage();
-    await employeepage.addEmployee(employee1)   
-    await employeepage.addEmployee(employee2)
+    await employeepage.addEmployee(employee1);   
+    await employeepage.addEmployee(employee2);
 
     await employeepage.navigateEmployees();
     await employeepage.expectEmployeesVisible([employee1, employee2]);
