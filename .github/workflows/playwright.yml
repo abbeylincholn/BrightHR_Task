@@ -1,29 +1,37 @@
-name: Playwright Tests
+name: Playwright Tests (Docker)
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
 jobs:
   test:
-    timeout-minutes: 60
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Install playwright OS dependencies      
-      run: npx playwright install-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image
+        run: |
+          docker build -t brighthr-tests:ci .
+
+      # Run tests inside the container. Mount workspace so the HTML report is written to the runner.
+      - name: Run Playwright tests in Docker
+        run: |
+          docker run --rm \
+            --ipc=host --shm-size=1g \
+            -v "$GITHUB_WORKSPACE/playwright-report:/app/playwright-report" \
+            brighthr-tests:ci
+
+      - name: Upload Playwright HTML report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
