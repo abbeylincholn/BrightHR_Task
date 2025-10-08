@@ -4,35 +4,26 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-
 jobs:
   test:
-    runs-on: ubuntu-latest
     timeout-minutes: 60
-    container:
-      # IMPORTANT: match this to the version in your package.json (e.g. 1.55.0)
-      image: mcr.microsoft.com/playwright:v1.55.0-jammy
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      # The image already has Node and browsers. Don't re-install OS deps.
-      # Only install project deps:
-      - name: Install dependencies
-        run: npm ci
-
-      # If your package.json Playwright version == image version, you can skip this.
-      # If you do keep it, DO NOT use --with-deps inside the image.
-      - name: Ensure browsers are present for this version
-        run: npx playwright install
-
-      - name: Run Playwright tests
-        run: npx playwright test
-
-      - name: Upload report
-        if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
-          if-no-files-found: ignore
-          retention-days: 30
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Install playwright OS dependencies      
+      run: npx playwright install-deps
+    - name: Run Playwright tests
+      run: npx playwright test
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
