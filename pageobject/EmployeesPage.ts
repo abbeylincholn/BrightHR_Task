@@ -2,11 +2,11 @@ import { expect, Page, Locator } from '@playwright/test';
 
 interface DateParts {
   day: number;
-  month: number;  
+  month: number;
   year: number;
 }
 
-const startDate : DateParts = { day: 25, month: 12, year: 2025 };
+const startDate: DateParts = { day: 25, month: 12, year: 2025 };
 
 export interface EmployeeData {
   firstName: string;
@@ -60,7 +60,6 @@ export class EmployeesPage {
     this.day = (d) => this.panel.locator("//div[text()='" + d + "']");
     this.elementText = this.modal.locator('div[name="startDate"] span');
     this.closeOverlayBtn = page.locator(".fill-white")
-
   }
 
   private fullName(emp: Pick<EmployeeData, 'firstName' | 'lastName'>): string {
@@ -76,10 +75,10 @@ export class EmployeesPage {
     await expect(this.modal).toBeVisible();
   }
 
-  async selectDate({day, month, year}: DateParts): Promise<void> {
+  async selectDate({ day, month, year }: DateParts): Promise<void> {
     const expectedMonth = month.toString();
-  const expectedDate = day.toString();
-  const expectedYear = year.toString();
+    const expectedDate = day.toString();
+    const expectedYear = year.toString();
     const expectedList: string[] = [expectedMonth, expectedDate, expectedYear];
 
     await this.startDateSelector.click();
