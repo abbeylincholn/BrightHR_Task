@@ -1,5 +1,13 @@
 import { expect, Page, Locator } from '@playwright/test';
 
+interface DateParts {
+  day: number;
+  month: number;  
+  year: number;
+}
+
+const startDate : DateParts = { day: 25, month: 12, year: 2025 };
+
 export interface EmployeeData {
   firstName: string;
   lastName: string;
@@ -49,7 +57,7 @@ export class EmployeesPage {
     this.selectMonth = this.modal.locator('[data-e2e="select-month"]');
     this.months = this.panel.locator('button[data-track-action]');
     this.monthBtn = (i: number) => this.months.nth(i);
-    this.day = (d) => this.panel.locator("//div[text()='" + d + "']").nth(1);
+    this.day = (d) => this.panel.locator("//div[text()='" + d + "']");
     this.elementText = this.modal.locator('div[name="startDate"] span');
     this.closeOverlayBtn = page.locator(".fill-white")
 
@@ -68,10 +76,10 @@ export class EmployeesPage {
     await expect(this.modal).toBeVisible();
   }
 
-  async selectDate(): Promise<void> {
-    const expectedMonth: string = "12";
-    const expectedDate: string = "25";
-    const expectedYear: string = "2024";
+  async selectDate({day, month, year}: DateParts): Promise<void> {
+    const expectedMonth = month.toString();
+  const expectedDate = day.toString();
+  const expectedYear = year.toString();
     const expectedList: string[] = [expectedMonth, expectedDate, expectedYear];
 
     await this.startDateSelector.click();
@@ -104,7 +112,7 @@ export class EmployeesPage {
     await this.lastName.fill(emp.lastName);
     await this.email.fill(emp.emailAddress);
     await this.phone.fill(emp.phoneNumber);
-    await this.selectDate();
+    await this.selectDate(startDate);
     await this.jobTitle.fill(emp.jobTitle);
     await expect(this.saveBtn).toBeEnabled();
     await this.saveBtn.click();
