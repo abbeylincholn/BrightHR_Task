@@ -11,6 +11,10 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
+    env:
+      BRITHR_USERNAME: ${{ secrets.BRITHR_USERNAME }}
+      BRITHR_PASSWORD: ${{ secrets.BRITHR_PASSWORD }}
+
     steps:
       - uses: actions/checkout@v4
 
