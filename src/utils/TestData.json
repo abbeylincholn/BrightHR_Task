@@ -1,0 +1,18 @@
+{
+  "employees": [
+    {
+      "firstName": "Abiodun",
+      "lastName": "Ezekiel",
+      "emailAddress": "abiodun@example.com",
+      "phoneNumber": "0000011111",
+      "jobTitle": "QA Engineer"
+    },
+    {
+      "firstName": "Sophia",
+      "lastName": "Williams",
+      "emailAddress": "sophia@example.com",
+      "phoneNumber": "5551237890",
+      "jobTitle": "Software Tester"
+    }
+  ]
+}

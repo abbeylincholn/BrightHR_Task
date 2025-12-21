@@ -1,8 +1,7 @@
-
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-allure-results/
+node_modules
+playwright-report
+test-results
+allure-results
+allure-report
+storageState.json
+.env
