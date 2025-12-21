@@ -1,24 +1,13 @@
 {
-  "name": "brighthr-e2e",
+  "name": "brighthr_qa_test",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "playwright test",
-    "ui": "playwright test --ui",
-    "regression": "playwright test",
-    "smoke": "playwright test --grep @Smoke",
-    "report": "playwright show-report",
-    "allure:generate": "allure generate allure-results --clean -o allure-report",
-    "allure:open": "allure open allure-report"
-  },
+  "main": "index.js",
+  "repository": "https://github.com/abbeylincholn/BrightHR_Task.git",
+  "author": "abbey <abbeyezekiel100@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
-    "@types/node": "^25.0.3",
-    "allure-commandline": "^2.29.0",
-    "allure-playwright": "^3.4.1",
-    "dotenv": "^16.4.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "@playwright/test": "^1.57.0",
+    "allure-playwright": "^3.4.3",
+    "dotenv": "^17.2.3"
   }
 }
