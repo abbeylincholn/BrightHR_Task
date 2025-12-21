@@ -19,7 +19,7 @@ export default defineConfig({
   use: {
     baseURL: process.env.BASE_URL,
     browserName: 'chromium',
-    headless: false,
+    headless: true,
     trace: 'on',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure'
