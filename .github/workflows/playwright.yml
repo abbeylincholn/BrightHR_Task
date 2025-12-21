@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      BASE_URL: ${{ vars.BASE_URL }}
       BRITHR_USERNAME: ${{ secrets.BRITHR_USERNAME }}
       BRITHR_PASSWORD: ${{ secrets.BRITHR_PASSWORD }}
 
