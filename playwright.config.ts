@@ -30,9 +30,9 @@ export default defineConfig({
     {
       name: 'auth',
       testMatch: ['**/setup/auth.setup.ts'],
-      // use: {
-      //   storageState: undefined
-      // }
+      use: {
+        storageState: undefined
+      }
     },
 
     // 2) UI tests — reuse saved storageState.json
@@ -40,9 +40,9 @@ export default defineConfig({
       name: 'ui-tests',
       testMatch: ['**/e2e/**/*.spec.ts'],
       dependencies: ['auth'],
-      // use: {
-      //   storageState: 'storageState.json'
-      // }
+      use: {
+        storageState: 'storageState.json'
+      }
     }
   ]
 });
